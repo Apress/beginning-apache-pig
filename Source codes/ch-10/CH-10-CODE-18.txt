@@ -1,0 +1,6 @@
+hdfs@cluster10-1:~> cat countagg.macro 
+DEFINE countagg(r,colname)  returns void{
+dnogrp=group $r  by $colname;
+empcount = foreach dnogrp generate group as group1,COUNT($r.eno) as eno;
+store empcount into 'empcount';
+};

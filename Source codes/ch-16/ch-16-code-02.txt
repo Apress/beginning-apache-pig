@@ -1,0 +1,35 @@
+public class CacheJoin extends EvalFunc<String> {
+
+	@Override
+	public String exec(Tuple input) throws IOException {
+		Integer dno = (Integer) input.get(0);
+
+		if (dno != null)
+			return getdname("./department.csv", dno);
+		else
+			return "OTHERS";
+	}
+
+      String getdname(String filename, int dno) throws FileNotFoundException {
+		Scanner sc = new Scanner(new FileReader(filename));
+		HashMap<Integer, String> map = new HashMap<Integer, String>();
+		while (sc.hasNext()) {
+			String[] values = sc.nextLine().split(",");
+			map.put(new Integer(values[0]), values[1]);
+		}
+		String dname = map.get(new Integer(dno));
+		if (dname != null) {
+			dname = dname.toUpperCase();
+		}
+		return dname;
+
+	}
+
+	@Override
+	public List<String> getCacheFiles() {
+		ArrayList<String> dfsfiles = new ArrayList<String>();
+		dfsfiles.add("/user/hdfs/department.csv");
+		return dfsfiles;
+	}
+
+}

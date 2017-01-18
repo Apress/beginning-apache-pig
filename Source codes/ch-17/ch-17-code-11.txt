@@ -1,0 +1,9 @@
+public class FunUpperCase implements Function<String, String> {
+
+	@Override
+	public String call(String str) throws Exception {
+		String[] empdetails = str.split(",");
+		return empdetails[1].toUpperCase();
+	}
+
+}

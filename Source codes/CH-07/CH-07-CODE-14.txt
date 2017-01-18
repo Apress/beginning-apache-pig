@@ -1,0 +1,3 @@
+  employees = LOAD 'employees' USING org.apache.hive.hcatalog.pig.HCatLoader();
+  employees10 = limit employees 10;
+  dump employees10;

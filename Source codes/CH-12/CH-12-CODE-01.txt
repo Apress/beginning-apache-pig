@@ -1,0 +1,23 @@
+public class DCAccessor extends EvalFunc<String> {
+
+	@Override
+	public String exec(Tuple input) throws IOException {
+			Scanner scanlocalfile=new Scanner(new FileReader("./department.csv "));
+	
+Scanner scanhdfsfile=new Scanner(new FileReader("./locations.csv "));	
+				
+		return getdname("./department.csv", dno);
+	}
+@Override
+	public List<String> getShipFiles() {
+ArrayList<String> localfiles= new ArrayList<String>();
+localfiles.add("/home/hdfs/department.csv");
+		return localfiles;
+	}
+@Override
+	public List<String> getCacheFiles() {
+ArrayList<String> hdfsfiles= new ArrayList<String>();
+localfiles.add("/home/hdfs/locations.csv");
+		return localfiles;
+	}
+}

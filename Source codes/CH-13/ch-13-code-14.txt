@@ -1,0 +1,7 @@
+
+	 public List<String> getShipFiles(){
+		 String localdno="/home/hdfs/local-departments.csv";
+		 List<String> smallfiles=new ArrayList<String>();
+		 smallfiles.add(localdno);
+		 return smallfiles;
+	 }

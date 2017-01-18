@@ -1,0 +1,11 @@
+DEFINE macroex1() RETURNS void {
+..
+..
+Rel1 = macroex2();     
+ };
+
+DEFINE macroex2() RETURNS void {
+..
+..
+Rel2 = macroex1();     
+ };

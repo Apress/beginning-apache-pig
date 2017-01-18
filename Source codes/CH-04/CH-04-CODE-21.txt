@@ -1,0 +1,4 @@
+emp = load 'hbase://employee' using org.apache.pig.backend.hadoop.hbase.HBaseStorage('empdetails:eno, empdetails:ename, empdetails:salary, empdetails:dno') as (empno:int,ename:chararray,salary:int,dno:int);
+grpall = group emp by dno  using 'collected';
+totcount =foreach grpall generate group,COUNT(test.empno);
+dump totcount;

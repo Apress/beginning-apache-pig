@@ -1,0 +1,7 @@
+hdfs@cluster10-1:~> cat countagg.macro 
+IMPORT 'filternotnull.macro'; 
+DEFINE countagg(r,colname)  returns rerel1{
+dnogrp=group $r  by $colname;
+empcount = foreach dnogrp generate group as group1,COUNT($r.eno) as eno;
+$rerel1 = filternotnull(empcount,group1);
+};

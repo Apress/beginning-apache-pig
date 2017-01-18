@@ -1,0 +1,7 @@
+sqlContext.sql("select eno,ename from employee where ename like '%bala%'").show();
+
++---+-----+
+|eno|ename|
++---+-----+
+|  1| bala|
++---+-----+

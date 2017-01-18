@@ -1,0 +1,3 @@
+Cat /home/hdfs/inputoutput.properties
+Inputdir=/data/employee
+Outputdir=/data/out/emp

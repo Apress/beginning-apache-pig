@@ -1,0 +1,7 @@
+SPLIT relationname INTO 
+               relname1 IF condition1,
+               relname2 IF condition2,
+               … ,
+               relname3 OTHERWISE;
+
+relname1 IF condition1

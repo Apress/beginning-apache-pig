@@ -1,0 +1,3 @@
+names = load 'names';
+wc =  MAPREDUCE 'hadoop-mapreduce-examples.jar' store names into 'mrinputdir' load 'mroutputdir' as (word:chararray,num:int) `wordcount namesout mroutputdir` ;
+dump wc;

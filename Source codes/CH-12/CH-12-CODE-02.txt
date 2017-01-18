@@ -1,0 +1,4 @@
+package customutils;
+public enum NullValues {
+DNONULL,SALARYNULL
+}

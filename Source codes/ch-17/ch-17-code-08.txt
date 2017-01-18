@@ -1,0 +1,6 @@
+public class SampleBuffer extends BaseOperation implements Buffer {
+
+	public void operate(FlowProcess fproc, BufferCall bcall) {
+	}
+
+}

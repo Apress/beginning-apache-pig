@@ -1,0 +1,3 @@
+Public string getIntermed(){
+Return CountIntermed.class.getname();
+}

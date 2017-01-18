@@ -1,0 +1,6 @@
+input = LOAD '/path/to/input/file/' AS (line:Chararray);
+Words = FOREACH input GENERATE FLATTEN(TOKENIZE(line,',')) AS word; 
+Grouped = GROUP words BY word; 
+wordcount = FOREACH Grouped GENERATE group, COUNT(word) as wordcount;  
+store wordcount into '/path/to/output/dir';
+

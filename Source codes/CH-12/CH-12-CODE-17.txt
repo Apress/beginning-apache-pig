@@ -1,0 +1,15 @@
+public class CountInitial extends org.apache.pig.EvalFunc<Tuple> {
+	TupleFactory mTupleFactory=TupleFactory.getInstance();
+	@Override
+	public Tuple exec(Tuple input) throws IOException {
+		DataBag bag = (DataBag)input.get(0);
+        Iterator it = bag.iterator();
+        if (it.hasNext()){
+            Tuple t = (Tuple)it.next();
+            if (t != null && t.get(0) == null)
+                return mTupleFactory.newTuple(Integer.valueOf(1));
+        }
+        return mTupleFactory.newTuple(Integer.valueOf(0));
+}
+}
+

@@ -1,0 +1,5 @@
+DEFINE countagg(r,colname)  returns rerel{
+dnogrp=group $r  by $colname;
+empcount = foreach dnogrp generate group,COUNT($r.eno) as eno;
+$rerel = filter empcount by group is not null;
+}

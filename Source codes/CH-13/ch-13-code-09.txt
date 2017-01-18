@@ -1,0 +1,96 @@
+public class DoubleColonStorer extends StoreFunc {
+	private RecordWriter rWriter = null;
+	private String delim = "::";
+	private static final int BUFFER_SIZE = 1024;
+	private static final String UTF8 = "UTF-8";
+
+	@Override
+	public OutputFormat getOutputFormat() throws IOException {
+		return new TextOutputFormat<WritableComparable, Text>();
+	}
+
+	@Override
+	public void prepareToWrite(RecordWriter writer) throws IOException {
+		rWriter = writer;
+	}
+
+	ByteArrayOutputStream out = new ByteArrayOutputStream(BUFFER_SIZE);
+
+	@Override
+	public void putNext(Tuple tuple) throws IOException {
+		int tsize = tuple.size();
+		for (int i = 0; i < tsize; i++) {
+			Object field;
+			try {
+				field = tuple.get(i);
+			} catch (ExecException ee) {
+				throw ee;
+			}
+
+			putField(field);
+
+			if (i != tsize - 1) {
+				out.write(delim.getBytes());
+			}
+		}
+
+		Text text = new Text(out.toByteArray());
+		try {
+			rWriter.write(null, text);
+			out.reset();
+		} catch (InterruptedException e) {
+			throw new IOException(e);
+		}
+
+	}
+
+	private void putField(Object field) throws IOException {
+
+		switch (DataType.findType(field)) {
+		case DataType.NULL:
+			break;
+		case DataType.BOOLEAN:
+			out.write(((Boolean) field).toString().getBytes());
+			break;
+
+		case DataType.INTEGER:
+			out.write(((Integer) field).toString().getBytes());
+			break;
+
+		case DataType.LONG:
+			out.write(((Long) field).toString().getBytes());
+			break;
+
+		case DataType.FLOAT:
+			out.write(((Float) field).toString().getBytes());
+			break;
+
+		case DataType.DOUBLE:
+			out.write(((Double) field).toString().getBytes());
+			break;
+
+		case DataType.BYTEARRAY: {
+			byte[] b = ((DataByteArray) field).get();
+			out.write(b, 0, b.length);
+			break;
+		}
+
+		case DataType.CHARARRAY:
+			out.write(((String) field).getBytes(UTF8));
+			break;
+
+		default: {
+			int errCode = 2108;
+			String msg = "Unknown Data type: " + field;
+			throw new ExecException(msg, errCode, PigException.BUG);
+		}
+
+		}
+	}
+
+	@Override
+	public void setStoreLocation(String loc, Job job) throws IOException {
+		TextOutputFormat.setOutputPath(job, new Path(loc));
+	}
+
+}

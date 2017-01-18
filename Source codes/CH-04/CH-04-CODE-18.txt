@@ -1,0 +1,5 @@
+emp = load 'employee.csv' using PigStorage(',') as (eno:int,ename:chararray,salary:int,dno:int);
+deptgrp = GROUP emp By dno;
+describe deptgrp;
+
+deptgrp: {group: int,emp: {(eno: int,ename: chararray,salary: int,dno: int)}}

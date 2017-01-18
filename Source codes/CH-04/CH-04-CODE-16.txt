@@ -1,0 +1,7 @@
+Deptorder = ORDER emp by deptno desc;
+Dump deptorder;
+/
+(200,Radha,200000,300)
+(400,Niruopam,1600000,200)
+(100,Bala,100000,200)
+(300,Nitya,150000,)

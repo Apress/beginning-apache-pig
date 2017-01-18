@@ -1,0 +1,2 @@
+emp = load  'employees' as (empname:chararray, year:int);
+empmap = foreach emp generate TOMAP(empname, year);

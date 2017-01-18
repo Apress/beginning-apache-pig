@@ -1,0 +1,5 @@
+   hdfs dfs -ls /user/hdfs/jobstatus
+Found 3 items
+-rw-r--r--   3 hdfs hdfs          2 2016-04-14 00:50 jobstatus/exit
+-rw-r--r--   3 hdfs hdfs        160 2016-04-14 00:50 jobstatus/stderr
+-rw-r--r--   3 hdfs hdfs          0 2016-04-14 00:50 jobstatus/stdout

@@ -1,0 +1,4 @@
+<cluster name="prodcluster">
+            <validity start="2016-06-20T03:00Z " end="2017-06-19T00:00Z"/>
+            <retention limit="months(3)" action="delete"/>
+ </cluster>

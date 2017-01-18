@@ -1,0 +1,4 @@
+select word,count(word) as count 
+from
+(SELECT explode(split(sentence, ',')) AS word FROM texttable)temp
+group by word

@@ -1,0 +1,2 @@
+<interface type="execute" endpoint="<hostname>:8021" version="0.20.2" />
+<interface type="workflow" endpoint="http://<hostname>:11000/oozie/" version="4.0" />

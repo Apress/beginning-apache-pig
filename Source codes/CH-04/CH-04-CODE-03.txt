@@ -1,0 +1,15 @@
+hdfs@cluster10-1:~> hdfs dfs -ls /user/hdfs/date=2016-07-0[1-7]
+Found 1 items
+-rw-r--r--   3 hdfs hdfs         85 2016-07-04 05:27 /user/hdfs/date=2016-07-01/employee.csv
+Found 1 items
+-rw-r--r--   3 hdfs hdfs         85 2016-07-04 05:27 /user/hdfs/date=2016-07-02/employee.csv
+Found 1 items
+-rw-r--r--   3 hdfs hdfs         85 2016-07-04 05:27 /user/hdfs/date=2016-07-03/employee.csv
+Found 1 items
+-rw-r--r--   3 hdfs hdfs         85 2016-07-04 05:27 /user/hdfs/date=2016-07-04/employee.csv
+Found 1 items
+-rw-r--r--   3 hdfs hdfs         85 2016-07-04 05:27 /user/hdfs/date=2016-07-05/employee.csv
+Found 1 items
+-rw-r--r--   3 hdfs hdfs         85 2016-07-04 05:27 /user/hdfs/date=2016-07-06/employee.csv
+Found 1 items
+-rw-r--r--   3 hdfs hdfs         85 2016-07-04 05:27 /user/hdfs/date=2016-07-07/employee.csv

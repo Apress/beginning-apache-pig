@@ -1,0 +1,8 @@
+split emp into 
+dept200 IF deptno<=200 , 
+dept300 IF (deptno>200 and deptno<300),
+otherdept otherwise;
+
+store dept200 into 'dept200';
+store dept300 into 'dept300';
+store otherdept into 'otherdept';

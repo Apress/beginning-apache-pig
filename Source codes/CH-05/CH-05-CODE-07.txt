@@ -1,0 +1,11 @@
+DEFINE desca TOP('DESC');---first define macro
+
+emp = load 'employee.csv' using PigStorage(',') as (empno:int,ename:chararray,salary:int,deptno:int);
+deptnogrp = group emp by deptno;
+empcount = foreach deptnogrp generate FLATTEN(group),COUNT(emp) as ecount;
+empcount = GROUP empcount BY ecount; ---group before applying top
+empcount = foreach empcount{
+result = desca(2,1,empcount);
+ generate result;
+}
+dump empcount;

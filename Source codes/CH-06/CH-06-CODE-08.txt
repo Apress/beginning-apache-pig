@@ -1,0 +1,5 @@
+Cat paramvalues
+INPATH=/user/hdfs/data/movies
+OUTPATH==/user/hdfs/out/movies
+
+oozie pig -oozie http://localhost:8080/oozie -file /path/to/ dumpmovies.pig -config job.properties -X -paramfile /path/to/paramvalues

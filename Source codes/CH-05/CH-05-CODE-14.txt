@@ -1,0 +1,6 @@
+hbase(main):001:0> scan 'emp'
+ROW                                        COLUMN+CELL                                              
+ 100                                       column=empdetails:deptno, timestamp=1466921682193, value=200                                                                
+ 100                                       column=empdetails:ename, timestamp=1466921682193, value=Bala                                                                
+ 100                                       column=empdetails:salary, timestamp=1466921682193, value=100000
+1 row(s) in 0.3040 seconds

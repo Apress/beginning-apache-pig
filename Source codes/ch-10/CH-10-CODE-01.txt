@@ -1,0 +1,4 @@
+dnogrp = group emp by dno;
+empcount = foreach dnogrp generate group,COUNT(emp.eno) as eno;
+empcount = filter empcount by group is not null;
+dump empcount;

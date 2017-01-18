@@ -1,0 +1,14 @@
+<process xmlns='uri:falcon:process:0.1' name='hdfsToHbase'>
+  <clusters>
+    <cluster name='testCluster'>
+      <validity start='2016-08-04T10:27Z' end='2016-09-04T12:27Z'/>
+    </cluster>
+  </clusters>
+  <parallel>1</parallel>
+  <order>FIFO</order>
+  <frequency>days(1)</frequency>
+  <timezone>GMT-05:00</timezone>
+  <workflow name='pigtest' version='pig-0.12.0' engine='pig' path='/user/falcon/storeinhbase.pig'/>
+  <retry policy='periodic' delay='minutes(5)' attempts='3'/>
+  <ACL owner='hdfs' group='hdfs' permission='0755'/>
+</process>

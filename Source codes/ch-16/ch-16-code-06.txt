@@ -1,0 +1,4 @@
+emp = load 'employee.csv' using PigStorage(',') as (eno:int,ename:chararray,salary:int,dno:int);
+emp = foreach emp generate eno,dno;
+grp = group emp by dno ;
+grpcnt = foreach grp generate FLATTEN(emp.dno),COUNT(emp.eno);

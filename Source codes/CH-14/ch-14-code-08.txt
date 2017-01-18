@@ -1,0 +1,26 @@
+Map-Reduce Framework
+                Map input records=69450395
+                Map output records=69450395
+                Map output bytes=763954345
+                Map output materialized bytes=230
+                Input split bytes=3680
+                Combine input records=69450395
+                Combine output records=10
+                Reduce input groups=1
+                Reduce shuffle bytes=230
+                Reduce input records=10
+                Reduce output records=1
+                Spilled Records=20
+                Shuffled Maps =10
+                Failed Shuffles=0
+                Merged Map outputs=10
+                GC time elapsed (ms)=139182
+                CPU time spent (ms)=633900
+                Physical memory (bytes) snapshot=16213774336
+                Virtual memory (bytes) snapshot=47089934336
+                Total committed heap usage (bytes)=15805710336
+Accumulator
+                accumulate=1000
+		   cleanup=1001
+                getvalue=1000
+

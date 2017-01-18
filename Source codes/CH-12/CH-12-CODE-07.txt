@@ -1,0 +1,4 @@
+replacenull = FOREACH emp GENERATE strutils.replacenull(dno) as dno;
+describe replacenull;
+
+replacenull:{dno:int}

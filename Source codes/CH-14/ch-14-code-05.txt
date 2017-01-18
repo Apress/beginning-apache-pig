@@ -1,0 +1,6 @@
+hdfs@cluster10:~>cat /home/hdfs/empcount.pig
+emp = load 'employee.csv' using PigStorage(',') as (eno:int,ename:chararray,salary:int,dno:int);
+grpall = group emp all;
+empcount = foreach emp generate COUNT_STAR(emp.eno);
+dump empcount;
+

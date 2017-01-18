@@ -1,0 +1,4 @@
+define hivesum HiveUDAF('sum');
+ emp = load  'employee' using PigStorage(',')  as  (eno:int,ename:chararray, salary:double,dno:int);
+dnogrp = group emp by dno;
+dnosum = foreach dnogrp generate emp.dno,hivesum(emp.salary);

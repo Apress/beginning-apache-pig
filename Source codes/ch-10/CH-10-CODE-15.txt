@@ -1,0 +1,4 @@
+Rel1=Foreach emp {
+Rel = macroex();
+Generate..
+}

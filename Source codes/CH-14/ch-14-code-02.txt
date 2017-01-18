@@ -1,0 +1,21 @@
+grunt> explain -xml empcount;
+
+<mapReducePlan>
+  <mapReduceNode scope="25">
+    <map>
+      <POLocalRearrange scope="44">
+        <alias>grpall</alias>
+        <POProject scope="46"/>
+        <POForEach scope="26">
+          <alias>empcount</alias>
+          <POProject scope="27"/>
+          <POUserFunc scope="28">
+            <POProject scope="29">
+              <POProject scope="30"/>
+            </POProject>
+          </POUserFunc>
+.
+.
+</map>
+</mapreduce>
+</mapreducePlan>

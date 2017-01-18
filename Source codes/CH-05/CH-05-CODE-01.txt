@@ -1,0 +1,6 @@
+Employee = load '/user/hdfs/in/employee' using PigStorage(',') as (eno:int,ename:charaaray,desg:chararray,deptno:int);
+Department=load '/user/hdfs/in/dept' using PigStorage(',') as (deptno:int,dname:chararray);
+joinempdept = join Employee by deptno,Department by deptno;
+enamedanme = foreach joinempdept generate ename,dname;
+dump enamedname;
+

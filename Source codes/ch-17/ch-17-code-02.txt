@@ -1,0 +1,2 @@
+Fields empout= new Fields(new String[]{"dno" ,"count"});
+Tap sinkTap = new Hfs(empout, "/data/emp",SINKMODE.REPLACE );

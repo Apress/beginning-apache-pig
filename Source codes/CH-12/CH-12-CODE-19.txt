@@ -1,0 +1,16 @@
+public class CountFinal extends EvalFunc<Integer> {
+	@Override
+	public Integer exec(Tuple input) throws IOException {
+		DataBag values = (DataBag)input.get(0);
+        int sum = 0;
+        for (Iterator<Tuple> it = values.iterator(); it.hasNext();) {
+            Tuple t = it.next();
+             if (t != null && t.size() > 0 && t.get(0) != null){
+            	Integer i=(Integer)t.get(0);
+            sum += i.intValue();
+            }
+        }
+		return new Integer(sum);
+	}
+
+}

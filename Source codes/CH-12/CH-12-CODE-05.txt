@@ -1,0 +1,7 @@
+public Schema outputSchema(Schema input){
+Schema udfSchema=new Schema();
+..
+..
+Return udfSchema;
+		
+	}

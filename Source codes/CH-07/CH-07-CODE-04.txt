@@ -1,0 +1,2 @@
+hcat -e "select * from numbers"
+FAILED: SemanticException Operation not supported

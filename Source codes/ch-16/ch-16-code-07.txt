@@ -1,0 +1,2 @@
+Emp = load 'employee.csv' using PigStorage(',') as (eno:int,ename:chararray,salary:int,dno:int);
+Newsal = foreach emp generate salary,salary*1.1;

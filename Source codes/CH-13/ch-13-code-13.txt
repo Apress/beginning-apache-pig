@@ -1,0 +1,7 @@
+public List<String> getCacheFiles(){
+		 String dfsdno="/user/hdfs/dfs-departments.csv";
+		 List<String> smallfiles=new ArrayList<String>();
+		 smallfiles.add(dfsdno);
+		 return smallfiles;
+		 
+	 }

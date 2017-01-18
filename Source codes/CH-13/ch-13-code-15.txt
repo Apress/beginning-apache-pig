@@ -1,0 +1,10 @@
+public class StatusCounter implements ErrorHandler {
+PigStatusReporter pigStatusReporter=PigStatusReporter.getInstance();
+	public void onError(String arg0, Exception arg1, Tuple arg2) {
+		pigStatusReporter.incrCounter("EmployeeRecords", "Failed", 1);
+		}
+
+	public void onSuccess(String arg0) {
+		pigStatusReporter.incrCounter("EmployeeRecords", "succeeded", 1);			}
+}
+

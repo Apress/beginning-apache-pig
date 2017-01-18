@@ -1,0 +1,3 @@
+public OutputFormat getOutputFormat() throws IOException {
+return new TextOutputFormat<WritableComparable,Text> ();
+	}

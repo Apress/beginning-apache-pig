@@ -1,0 +1,8 @@
+hdfs@cluster10-1:~> cat uppercasejs.js 
+jsUpperCase.outputSchema = " enameUC:chararray ";
+function jsUpperCase(ename) {
+     if(ename!==null)
+    return ename.toUpperCase();
+	else
+	return ename;
+}

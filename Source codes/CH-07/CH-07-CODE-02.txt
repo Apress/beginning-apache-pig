@@ -1,0 +1,7 @@
+hcat -e "use test;show tables;"
+OK
+Time taken: 2.069 seconds
+OK
+Dummy
+Test
+Time taken: 0.659 seconds

@@ -1,0 +1,11 @@
+JavaRDD<String> lineText = javaSparkContext.textFile("data\\employee");
+	JavaRDD<String> uppername=lineText.map(new Function<String, String>() {
+
+			@Override
+			public String call(String str) throws Exception {
+
+				String[] words=str.split(",");
+				String uppername=words[1].toUpperCase();
+				return uppername;
+			}
+		});

@@ -1,0 +1,7 @@
+register parquet-pig-1.2.2.jar ;
+register parquet-encoding-1.2.5.jar;
+register parquet-column-1.2.5.jar;
+register parquet-common-1.2.5.jar;
+register parquet-hadoop-1.2.5.jar;
+register parquet-format-1.0.0.jar;
+emp = load 'employee/' using parquet.pig.ParquetLoader as (eno:int,ename:chararray,salary:int,dno:int);

@@ -1,0 +1,2 @@
+<location name="staging" path="/tmp/emp/staging" />
+<location name="working" path="/tmp/emp/working" /> 

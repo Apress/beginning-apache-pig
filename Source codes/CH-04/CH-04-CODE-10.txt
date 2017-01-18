@@ -1,0 +1,3 @@
+deptgrp = GROUP emp by dno ;
+empcount = foreach deptgrp generate group,emp.ename;
+dump  empcount;

@@ -1,0 +1,2 @@
+employee = load 'csvtoorc' using OrcStorage as (eno:int,ename:chararray,salary:int,deptno:int);
+dept200 = filter emp by deptno==200;

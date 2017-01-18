@@ -1,0 +1,3 @@
+oozie job -oozie http://localhost:11000/oozie -config /path/to/job.properties -submit
+
+job:14-20160525161321-oozie-test-c

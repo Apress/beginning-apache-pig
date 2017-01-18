@@ -1,0 +1,66 @@
+public class DoublecolonLoader extends LoadFunc {
+	protected RecordReader reader = null;
+	private String delimiter = "::";
+	private ArrayList<Object> tupleList = null;
+	private TupleFactory tupleFactory = TupleFactory.getInstance();
+	@Override
+	public Tuple getNext() throws IOException {
+		try {
+			boolean keyexists = reader.nextKeyValue();
+			if (!keyexists) {
+				return null;
+			}
+			Text row = (Text) reader.getCurrentValue();
+			int delimpos = row.find(delimiter);
+			byte[] buf = row.getBytes();
+			int len = row.getLength();
+			int start = 0;
+
+			for (int i = 0; i < len; i++) {
+				if (delimpos > 0) {
+					readField(buf, start, delimpos);
+					start = delimpos + 2;
+				}
+				delimpos = row.find(delimiter, start);
+			}
+			readField(buf, start, len);
+
+			Tuple t = tupleFactory.newTupleNoCopy(tupleList);
+
+			tupleList = null;
+			return t;
+		} catch (InterruptedException e) {
+			int errCode = 6018;
+			String errMsg = "Could not read input";
+			throw new ExecException(errMsg, errCode,
+					PigException.REMOTE_ENVIRONMENT, e);
+		}
+
+	}
+private void readField(byte[] buf, int start, int end) {
+		if (tupleList == null) {
+			tupleList = new ArrayList<Object>();
+		}
+		if (start == end) {
+			tupleList.add(null);
+		} else {
+			tupleList.add(new DataByteArray(buf, start, end));
+		}
+	}
+
+	@Override
+	public InputFormat getInputFormat() {
+		return new TextInputFormat();
+	}
+
+	@Override
+	public void prepareToRead(RecordReader rreader, PigSplit split) {
+		reader = rreader;
+	}
+
+	@Override
+	public void setLocation(String inputpath, Job job) throws IOException {
+		FileInputFormat.setInputPaths(job, inputpath);
+	}
+
+} 

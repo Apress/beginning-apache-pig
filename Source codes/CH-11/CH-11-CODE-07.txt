@@ -1,0 +1,5 @@
+hdfs@cluster10-1:~> cat jythonfunc.pig 
+register 'namelen.py' using org.apache.pig.scripting.jython.JythonScriptEngine as customutils;
+emp = load 'employee.csv' using PigStorage(',') as (eno:int,ename:chararray,salary:int,dno:int);
+emp = foreach emp generate ename,customutils.namelength(ename);
+dump emp;

@@ -1,0 +1,15 @@
+public void accumulate(Tuple input) throws IOException {
+		pigStatusReporter.incrCounter("Accumulator", "accumulate",1);
+.
+.
+}
+public Integer getValue() {
+pigStatusReporter.incrCounter("Accumulator", "getvalue",1);
+.
+.
+}
+public void cleanup() {
+pigStatusReporter.incrCounter("Accumulator", "cleanup",1);
+.
+.
+}

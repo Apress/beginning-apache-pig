@@ -1,0 +1,17 @@
+public class FramesDemo {
+	public static void main(String[] args) {
+		System.setProperty("hadoop.home.dir", "hadoop-winutils");
+             SparkConf sparkConf = new SparkConf().setAppName("FramesDemo")
+				.setMaster("local").set("spark.executor.memory", "2g");
+		sparkConf.set("spark.io.compression.codec",
+				"org.apache.spark.io.LZ4CompressionCodec");
+
+		JavaSparkContext javaSparkContext = new JavaSparkContext(sparkConf);
+		SQLContext sqlContext = new SQLContext(javaSparkContext);
+		DataFrame dFrames = sqlContext.read().text("data\\emp\\*");
+	long rows = dFrames.orderBy("value").distinct().count();
+		System.out.println(rows);
+		javaSparkContext.stop();
+	}
+
+}

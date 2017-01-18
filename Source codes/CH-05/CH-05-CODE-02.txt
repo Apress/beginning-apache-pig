@@ -1,0 +1,6 @@
+emp = load '/data/employee' using PigStorage(',') as (empno:int,ename:chararray,salary:int,deptno:int);
+dept = load 'dept.csv' using PigStorage(',') as (deptno:int,dname:chararray);
+cogrp = cogroup emp by deptno outer,dept by deptno;
+describe cogrp;
+
+{group: int,emp: {(empno: int,ename: chararray,salary: int,deptno: int)},dept: {(deptno: int,dname: chararray)}}

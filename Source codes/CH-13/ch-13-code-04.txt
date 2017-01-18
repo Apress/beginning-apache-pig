@@ -1,0 +1,5 @@
+@Override
+    public String[] getPartitionKeys(String loc, Job job)
+    throws IOException {
+        return null;
+    }

@@ -1,0 +1,12 @@
+ls -ltra csvtojson
+total 36
+-rw-r--r-- 1 hdfs hadoop    8 Jun 23 02:44 ._SUCCESS.crc
+-rw-r--r-- 1 hdfs hadoop    0 Jun 23 02:44 _SUCCESS
+-rw-r--r-- 1 hdfs hadoop   12 Jun 23 02:44 ..pig_schema.crc
+-rw-r--r-- 1 hdfs hadoop  429 Jun 23 02:44 .pig_schema
+-rw-r--r-- 1 hdfs hadoop   12 Jun 23 02:44 ..pig_header.crc
+-rw-r--r-- 1 hdfs hadoop   24 Jun 23 02:44 .pig_header
+-rw-r--r-- 1 hdfs hadoop   12 Jun 23 02:44 .part-m-00000.crc
+-rw-r--r-- 1 hdfs hadoop  232 Jun 23 02:44 part-m-00000
+drwxr-xr-x 2 hdfs hadoop 4096 Jun 23 02:44 .
+drwxr-xr-x 7 hdfs hadoop 4096 Jun 23 02:57 ..

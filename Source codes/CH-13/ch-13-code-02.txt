@@ -1,0 +1,4 @@
+Register customutils.jar;
+Emp = load 'employee' using customutils.DoubleColonLoader() as (eno:int,ename:chararray,salary:int,dno:int)
+Enoename =foreach emp generate eno,ename;
+Dump enoename;

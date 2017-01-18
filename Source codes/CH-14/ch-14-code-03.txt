@@ -1,0 +1,30 @@
+grunt> explain -dot empcount;
+#-----------------------------------------------
+# New Logical Plan:
+#-----------------------------------------------
+digraph plan {
+compound=true;
+node [shape=rect];
+s602748972_in [label="", style=invis, height=0, width=0];
+s602748972_out [label="", style=invis, height=0, width=0];
+subgraph cluster_602748972 {
+label="LOForEach"labelloc=b;
+2010856706 [label="LOInnerLoad"];
+2027549979 [label="LOInnerLoad"];
+s210278405_in [label="", style=invis, height=0, width=0];
+s210278405_out [label="", style=invis, height=0, width=0];
+subgraph cluster_210278405 {
+label="LOGenerate"labelloc=b;
+1106933404 [label="Project0:(*)"];
+1074868579 [label="Dereference"];
+1906565212 [label="UserFunc"];
+1106933404 -> 1074868579
+1074868579 -> 1906565212
+s210278405_in -> 1106933404 [style=invis];
+969432090 [label="Project1:(*)"];
+722764585 [label="Dereference"];
+1657218305 [label="UserFunc"];
+969432090 -> 722764585
+722764585 -> 1657218305
+s210278405_in -> 969432090 [style=invis];
+};

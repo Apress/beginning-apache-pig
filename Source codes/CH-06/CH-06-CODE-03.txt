@@ -1,0 +1,6 @@
+<configuration>
+                <property>
+                    <name>mapred.job.queue.name</name>
+                    <value>default</value>
+                </property>
+</configuration>

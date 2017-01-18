@@ -1,0 +1,3 @@
+emp = load 'empmap.csv' using PigStorage(',') as (empmap:MAP[],sal,dno);
+	emp = foreach emp generate KEYSET(empmap);
+	dump emp;

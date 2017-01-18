@@ -1,0 +1,2 @@
+Employees = LOAD 'employees' USING org.apache.hive.hcatalog.pig.HCatLoader();
+  filterdoj= filter employees by dateoj='01-01-2010' dept=’100’;

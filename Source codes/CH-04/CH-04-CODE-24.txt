@@ -1,0 +1,3 @@
+enoename = cube emp by CUBE(eno,ename);
+describe enoename;
+enoename: {group: (eno: int,ename: chararray),cube: {(eno: int,ename: chararray,salary: int,dno: int)}}

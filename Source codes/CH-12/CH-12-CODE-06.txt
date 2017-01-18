@@ -1,0 +1,6 @@
+TupleFactory tfactory=TupleFactory.getInstance();
+Tuple myTuple=tfactory.newTuple(10);
+			
+BagFactory bfactory= BagFactory.getInstance();
+DataBag bag=bfactory.newDefaultBag();
+bag.add(myTuple);

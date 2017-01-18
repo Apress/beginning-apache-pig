@@ -1,0 +1,4 @@
+
+hcat -e "create table dummy (test string)"
+OK
+Time taken: 2.438 seconds

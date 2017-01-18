@@ -1,0 +1,3 @@
+SparkConf sparkConf = new SparkConf().setAppName("WordCount")
+		.setMaster("local")
+		.set("spark.executor.memory", "8g");

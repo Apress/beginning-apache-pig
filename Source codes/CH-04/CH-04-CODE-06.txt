@@ -1,0 +1,4 @@
+emp = load 'employee.csv' using PigStorage(',') as (eno:int,ename:chararray,salary:int,dno:int);
+dept = load 'dept.csv'using PigStorage(',') as (dno:int,dname:chararray);
+cogrp = cogroup emp by dno,dept by dno;
+describe cogrp;

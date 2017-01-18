@@ -1,0 +1,3 @@
+Emp1 = load '/data/employee' using PigStorage(',') ;
+emp2 = load '/data/newemployee' using PigStorage(',') as (eno:int,ename:chararray,salary:int,dno:int);
+empuni = union emp1,emp2 parallel 10;

@@ -1,0 +1,3 @@
+<prepare>
+                <delete path="/user/hdfs/output-data/pig"/>
+ </prepare>

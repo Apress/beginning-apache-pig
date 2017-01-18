@@ -1,0 +1,3 @@
+<outputs>
+        <output name="ratingsOut" feed="ratingfeed" instance="today(0,0)"/>
+    </outputs>

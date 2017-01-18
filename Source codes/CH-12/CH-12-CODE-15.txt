@@ -1,0 +1,5 @@
+public class CountFinal extends EvalFunc<Integer> {
+@Override
+	public Integer exec(Tuple input) throws IOException {
+        return new Integer(sum);
+	} 

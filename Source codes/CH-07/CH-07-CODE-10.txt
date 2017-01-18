@@ -1,0 +1,3 @@
+employees = load 'employees';
+employees5= limit employees  5;
+store employees5 into 'employees5';

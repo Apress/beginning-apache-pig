@@ -1,0 +1,4 @@
+emp = load 'employee.csv' using PigStorage(',') as (eno:int,ename:chararray,salary:int,dno:int);
+dept = load 'department.csv' using PigStorage(',') as (dno:int,dname:chararray);
+empjn = join emp by dno,dept by dno using 'skewed';
+

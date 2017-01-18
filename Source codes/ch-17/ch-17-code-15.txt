@@ -1,0 +1,11 @@
+SQLContext sqlContext = new SQLContext(javaSparkContext);
+DataFrame dFrames = sqlContext.read().text("data\\emp\\*");
+dFrames.registerTempTable("temp");
+DataFrame schema=sqlContext.sql("describe temp");
+schema.show();
+
++--------+---------+-------+
+|col_name|data_type|comment|
++--------+---------+-------+
+|   value|   string|       |
++--------+---------+-------+

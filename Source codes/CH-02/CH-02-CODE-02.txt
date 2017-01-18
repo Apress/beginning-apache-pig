@@ -1,0 +1,2 @@
+emp = load ‘/data/emp’ as (ename:chararray, eid:int, desg:chararray);
+Describe emp;

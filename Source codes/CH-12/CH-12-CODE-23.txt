@@ -1,0 +1,3 @@
+Emp = load 'employee.csv' using PigStorage() as (eo,ename,salary,dno);
+Nulldno = filter emp by IsNull(dno);
+Dump nulldno;

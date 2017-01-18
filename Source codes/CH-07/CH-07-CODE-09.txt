@@ -1,0 +1,7 @@
+hcat -e "dfs -ls /user/hdfs "
+Found 5 items
+drwx------   - hdfs hdfs          0 2016-04-14 14:00 .Trash
+drwxr-xr-x   - hdfs hdfs          0 2016-03-09 12:02 .hiveJars
+drwx------   - hdfs hdfs          0 2016-04-14 03:34 .staging
+drwx------   - hdfs hdfs          0 2016-04-14 00:50 jobstatus
+drwxr-xr-x   - hdfs hdfs          0 2016-03-09 12:29 joinnumbers

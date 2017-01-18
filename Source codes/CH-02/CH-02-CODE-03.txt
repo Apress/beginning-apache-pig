@@ -1,0 +1,2 @@
+Movies = load ‘/data/movies’ as (moviename, year, genre);
+Describe Movies;

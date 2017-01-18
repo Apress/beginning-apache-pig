@@ -1,0 +1,2 @@
+JavaSparkContext javaSparkContext = new JavaSparkContext(sparkConf);
+SQLContext sqlContext = new SQLContext(javaSparkContext);

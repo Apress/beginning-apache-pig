@@ -1,0 +1,3 @@
+var P = pig.compile(" emp = load 'employee.csv' as (eno:int,ename:chararray,salary:int,dno:int);”+
+       “jsout = foreach a generate eno,strfunc.jsUCase(ename),salary,dno”+
+           “dump jsout;"); 

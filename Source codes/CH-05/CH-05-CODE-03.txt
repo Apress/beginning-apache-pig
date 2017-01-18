@@ -1,0 +1,3 @@
+Empdeptjoin = join emp by deptno,dept by deptno;
+Describe empdeptjoin;
+empdeptjoin: {emp::empno: int,emp::ename: chararray,emp::salary: int,emp::deptno: int,dept::deptno: int,dept::dname: chararray}

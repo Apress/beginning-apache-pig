@@ -1,0 +1,14 @@
+JavaRDD<Employee> emp=javaSparkContext.textFile("data\\in\\emp*").map(new Function<String, Employee>() {
+
+		@Override
+		public Employee call(String str) throws Exception {
+			String[] erecord=str.split(",");
+			Employee emp=new Employee();
+			emp.setEno(Integer.parseInt(erecord[0]));
+			emp.setEname(erecord[1]);
+			emp.setSalary(Integer.parseInt(erecord[2]));
+			emp.setSalary(Integer.parseInt(erecord[3]));
+
+			return emp;
+		}
+	});

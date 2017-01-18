@@ -1,0 +1,3 @@
+public Schema outputSchema(Schema input) {
+		Schema outSchema = new Schema(new Schema.FieldSchema(null,DataType.TUPLE));
+		return outSchema;

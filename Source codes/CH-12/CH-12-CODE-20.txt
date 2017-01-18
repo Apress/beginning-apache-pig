@@ -1,0 +1,17 @@
+public class AlgebraicCountNull extends EvalFunc<Integer> implements Algebraic {
+public String getInitial() {
+		return CountInitial.class.getName();
+	}
+
+	public String getIntermed() {
+		return CountIntermediate.class.getName();
+	}
+public String getFinal() {
+		return CountFinal.class.getName();
+	}
+
+	@Override
+	public Integer exec(Tuple input) throws IOException {
+..
+..
+}

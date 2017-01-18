@@ -1,0 +1,10 @@
+sqlContext.sql("describe employee").show();
+
++--------+---------+-------+
+|col_name|data_type|comment|
++--------+---------+-------+
+|     dno|      int|       |
+|   ename|   string|       |
+|     eno|      int|       |
+|  salary|      int|       |
++--------+---------+-------+

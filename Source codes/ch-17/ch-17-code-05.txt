@@ -1,0 +1,17 @@
+public class LimitN {
+
+	public static void main(String[] args) {
+		Tap srcTap = new FileTap( new TextDelimited( new Fields(new String[]{"eno","ename","salary","dno"}),true,",") , "employee.csv");
+		Tap sinkTap = new FileTap( new TextDelimited( new Fields(new String[]{"eno","ename","salary","dno"})) , "employeelimit");
+		Pipe emp=new Pipe("emp");
+		Pipe ename=new Each(emp, new Limit(2));
+		Properties properties = new Properties();
+		  AppProps.setApplicationJarClass( properties, LimitN.class );
+		  LocalFlowConnector flowConnector = new LocalFlowConnector();
+		  Flow flow = flowConnector.connect( "limit", srcTap, sinkTap,ename );
+		  flow.complete();
+
+
+	}
+
+}

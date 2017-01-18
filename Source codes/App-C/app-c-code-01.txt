@@ -1,0 +1,2 @@
+emp = load 'hbase://emp' using org.apache.pig.backend.hadoop.hbase.HBaseStorage('empdetails:*','-loadKey=true -minTimestamp=1466922018861') ;
+dump emp;

@@ -1,0 +1,3 @@
+DEFINE filtenotnull() returns rerel{
+$rerel = filter emp by dno is not null;
+}

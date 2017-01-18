@@ -1,0 +1,4 @@
+JavaSparkContext javaSparkContext = new JavaSparkContext(sparkConf);
+SQLContext sqlContext = new SQLContext(javaSparkContext);
+DataFrame dFrames = sqlContext.read().text("data\\in\\p*");
+dFrames.show(10);

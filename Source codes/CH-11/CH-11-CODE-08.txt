@@ -1,0 +1,4 @@
+REGISTER  piggybank.jar ;
+Emp = load 'employee.csv' using PigStorage(',') as (eno: chararray,ename:chararray,salary:int,dno:int);
+Checknum = foreach emp generate org.apache.pig.piggybank.evaluation.IsNumeric(eno);
+Dump checknum;

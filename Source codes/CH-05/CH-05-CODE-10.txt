@@ -1,0 +1,7 @@
+employee = load 'employee.csv' using JsonStorage(',')
+dump employee;
+
+{"eno":100,"ename":"Bala","salary":100000,"deptno":200}
+{"eno":200,"ename":"Radha","salary":200000,"deptno":300}
+{"eno":300,"ename":"Nitya","salary":150000,"deptno":null}
+{"eno":400,"ename":"Niruopam","salary":1600000,"deptno":200}

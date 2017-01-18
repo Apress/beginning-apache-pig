@@ -1,0 +1,9 @@
+public class SalryFilter extends BaseOperation implements Filter {
+
+
+	public boolean isRemove(FlowProcess fproc, FilterCall fcall) {
+		TupleEntry emptuple=fcall.getArguments();
+		return null==emptuple.get(0);
+	}
+
+}

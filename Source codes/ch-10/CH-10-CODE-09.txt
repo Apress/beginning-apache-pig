@@ -1,0 +1,4 @@
+hdfs@cluster10-1:~> cat filternotnull.macro 
+DEFINE filternotnull(r1,colname1)  returns rerel{
+$rerel = filter $r1 by $colname1 is not null;
+};

@@ -1,0 +1,6 @@
+hdfs@cluster10-1:~> cat columnwiseempcount.pig.expanded
+emp = load 'employee.csv' USING PigStorage(',') as (eno:int, ename:chararray, salary:int, dno:int);
+macro_countagg_dnogrp_0 = group emp by (salary);
+empcount = foreach macro_countagg_dnogrp_0 generate group, COUNT(emp.(eno)) AS eno;
+empcount = filter empcount BY (group IS not null);
+dump empcount; 

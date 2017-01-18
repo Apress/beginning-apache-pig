@@ -1,0 +1,5 @@
+hdfs@cluster10-11:~> cat empmap.csv
+	[100#bala],100000,121
+	[101#Nirupam],120000,122
+	[102#radha],200000,123
+	[103#Nitya],1600000,124

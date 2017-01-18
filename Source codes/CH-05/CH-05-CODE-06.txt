@@ -1,0 +1,7 @@
+Grunt>empmap= foreach emp generate TOMAP(ename,empno);
+grunt>dump empmap;
+
+([Bala#100])
+([Radha#200])
+([Nitya#300])
+([Nirupam#400])

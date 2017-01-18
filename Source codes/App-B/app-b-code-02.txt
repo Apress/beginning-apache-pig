@@ -1,0 +1,27 @@
+{
+    {
+      "href" : "http://112.11.11.100:8080/api/v1/clusters/Cluster10/services/HDFS",
+      "ServiceInfo" : {
+        "cluster_name" : "Cluster10",
+        "service_name" : "HDFS"
+      }
+    },
+    {
+      "href" : "http://112.11.11.100:8080/api/v1/clusters/Cluster10/services/PIG",
+      "ServiceInfo" : {
+        "cluster_name" : "Cluster10",
+        "service_name" : "PIG"
+      }
+    },
+.
+.
+.
+    {
+      "href" : "http://112.11.11.100:8080/api/v1/clusters/Cluster10/services/SPARK",
+      "ServiceInfo" : {
+        "cluster_name" : "Cluster10",
+        "service_name" : "SPARK"
+      }
+    }
+  ]
+}

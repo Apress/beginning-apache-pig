@@ -1,0 +1,5 @@
+<locations>
+<location type="data" path="/data/mvoies" />
+ <location type="stats" path="/data/falcon/stats " />
+ <location type="meta" path="/data/falcon/meta" />
+</locations>

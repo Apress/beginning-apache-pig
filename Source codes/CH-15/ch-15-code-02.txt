@@ -1,0 +1,4 @@
+hdfs@cluster10-1:~> hdfs dfs -ls  /home/hdfs/empparquet/
+-rw-r--r-- 1 hdfs hadoop   0 Aug  1 02:35 _SUCCESS
+-rw-r--r-- 1 hdfs hadoop 529 Aug  1 02:35 part-m-00000.parquet
+-rw-r--r-- 1 hdfs hadoop 424 Aug  1 02:35 _metadata

@@ -1,0 +1,18 @@
+public class CountIntermediate extends EvalFunc<Tuple> {
+TupleFactory mTupleFactory=TupleFactory.getInstance();
+int count = 0;
+	@Override
+	public Tuple exec(Tuple input) throws IOException {
+           DataBag values = (DataBag)input.get(0);
+		for (Iterator<Tuple> it = values.iterator(); it.hasNext();) {
+	            Tuple t = it.next();
+	            Integer i=(Integer)t.get(0);
+	          if(i.intValue()==1)
+	        	  count++;
+	        }
+	        Tuple medtuple=mTupleFactory.newTuple();
+	        medtuple.append(new Integer(count));    
+		return medtuple;
+	}
+
+}

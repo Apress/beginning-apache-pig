@@ -1,0 +1,5 @@
+hdfs@cluster10-1:~> cat importmacro.pig
+import 'countagg.macro';
+emp = load 'employee.csv' using PigStorage(',') as (eno:int,ename:chararray,salary:int,dno:int);
+empcount = countagg (emp,dno);
+dump empcount;

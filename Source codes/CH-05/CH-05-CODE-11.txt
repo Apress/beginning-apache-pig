@@ -1,0 +1,11 @@
+hdfs@cluster10n1:~> ls -ltr emp
+-rw-r--r--  1 hdfs hadoop     8 Jun 27 13:15 ._SUCCESS.crc
+-rw-r--r--  1 hdfs hadoop     0 Jun 27 13:15 _SUCCESS
+-rw-r--r--  1 hdfs hadoop    12 Jun 27 13:15 ..pig_schema.crc
+-rw-r--r--  1 hdfs hadoop   147 Jun 27 13:15 .pig_schema
+-rw-r--r--  1 hdfs hadoop    12 Jun 27 13:15 ..pig_header.crc
+-rw-r--r--  1 hdfs hadoop     3 Jun 27 13:15 .pig_header
+-rw-r--r--  1 hdfs hadoop    12 Jun 27 13:15 .part-m-00000.crc
+-rw-r--r--  1 hdfs hadoop   120 Jun 27 13:15 part-m-00000
+drwxr-xr-x  2 hdfs hadoop  4096 Jun 27 13:15 .
+drwxr-xr-x 11 hdfs hadoop 12288 Jun 27 13:17 ..

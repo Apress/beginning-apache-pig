@@ -1,0 +1,21 @@
+package stringutils;
+import java.io.IOException;
+import org.apache.pig.EvalFunc;
+import org.apache.pig.data.Tuple;
+
+public class ReplaceNull extends EvalFunc<Integer> {
+	public Integer exec(Tuple input) throws IOException {
+		Integer dno = (Integer) input.get(0);
+		try {
+			if (dno == null)
+			{
+				return new Integer(400);
+			}
+		} catch (Exception e) {
+			throw new IOException(
+					" exception thrown while processing department number ", e);
+		}
+		return dno;
+
+	}
+}

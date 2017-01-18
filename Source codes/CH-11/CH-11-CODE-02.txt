@@ -1,0 +1,4 @@
+REGISTER strutils.jar;
+Emp = load '/data/employee.csv' using PigStorage(',') as (eno:int,ename:chararray,salary:int,dno:int);
+replacenull = FOREACH emp GENERATE eno,ename,salary,strutils.replacenull(dno);
+dump replacenull;

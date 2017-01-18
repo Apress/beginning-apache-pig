@@ -1,0 +1,2 @@
+employee = load 'employee.csv' using PigStorage(',') as (eno:int,ename:chararray,salary:int,deptno:int);
+store employee into 'csvtoorc'using OrcStorage('-c SNAPPY');

@@ -1,0 +1,7 @@
+
+hdfs@cluter10:~> hdfs dfs -ls empout
+Found 4 items
+-rw-r--r--   3 hdfs hdfs         21 2016-07-19 02:26 empout/.pig_header
+-rw-r--r--   3 hdfs hdfs        426 2016-07-19 02:26 empout/.pig_schema
+-rw-r--r--   3 hdfs hdfs          0 2016-07-19 02:26 empout/_SUCCESS
+-rw-r--r--   3 hdfs hdfs         72 2016-07-19 02:26 empout/part-m-00000

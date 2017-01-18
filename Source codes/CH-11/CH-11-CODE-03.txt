@@ -1,0 +1,3 @@
+function jsUpperCase(ename) {
+    return ename.toUpperCase();
+}

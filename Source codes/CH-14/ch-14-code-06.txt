@@ -1,0 +1,26 @@
+package pigtest;
+import java.io.IOException;
+import org.apache.pig.pigunit.PigTest;
+import org.apache.pig.tools.parameters.ParseException;
+import org.junit.Test;
+public class CountTester {
+@Test
+	public void testalgebraic(){
+	try {
+		
+		String[] inputdata={"100,Bala,1000000,200",
+				"101,Radha,1200000,300",
+				"102,Nitya,1500000,100",
+				"103,Pandu,5000000,"};
+		PigTest pt= new PigTest("/home/hdfs/empcount.pig");
+
+		String[] outputdata={"(4)"};
+			pt.assertOutput("emp",inputdata,"empcount",outputdata);
+} catch (IOException e) {
+		e.printStackTrace();
+	} catch (ParseException e) {
+		e.printStackTrace();
+	}
+}
+
+}

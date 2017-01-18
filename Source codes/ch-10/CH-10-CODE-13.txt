@@ -1,0 +1,8 @@
+..
+..
+Rel =  macroex();
+
+DEFINE macroex() RETURNS void {
+..
+..     
+ };

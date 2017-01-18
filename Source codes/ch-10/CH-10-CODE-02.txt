@@ -1,0 +1,3 @@
+DEFINE macro_name (param1, param2, ...]) RETURNS {void | rel1 [, rel2 ...]} {
+ pig_latin_statements
+ };

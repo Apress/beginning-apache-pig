@@ -1,0 +1,7 @@
+public class CountIntermed extends org.apache.pig.EvalFunc<Tuple> {
+@Override
+	public Tuple exec(Tuple input) throws IOException {
+.
+.
+}
+}

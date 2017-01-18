@@ -1,0 +1,16 @@
+<workflow-app xmlns="uri:oozie:workflow:0.2" name="pig-wf">
+    <start to="first-pig-node"/>
+    <action name="first-pig-node">
+        <pig>
+            <job-tracker>${jobTracker}</job-tracker>
+            <name-node>${nameNode}</name-node>
+<script>id.pig</script>
+        </pig>
+        <ok to="end"/>
+        <error to="fail"/>
+    </action>
+    <kill name="fail">
+        <message>Pig failed, error message[${wf:errorMessage(wf:lastErrorNode())}]</message>
+    </kill>
+    <end name="end"/>
+</workflow-app>

@@ -1,0 +1,6 @@
+hdfs@cluster10-1:~> Cat columnwiseempcount.pig
+
+IMPORT 'countagg.macro';
+emp = load 'employee.csv' using PigStorage(',') as (eno:int,ename:chararray,salary:int,dno:int);
+empcount = countagg (emp,dno);      ---------macro usage
+dump empcount;

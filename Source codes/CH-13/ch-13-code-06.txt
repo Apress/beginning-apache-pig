@@ -1,0 +1,17 @@
+public ResourceSchema getSchema(String arg0, Job arg1) throws IOException {
+		//define field and data type
+		FieldSchema eno=new FieldSchema("eno", DataType.INTEGER);
+		FieldSchema ename=new FieldSchema("ename", DataType.CHARARRAY);
+		FieldSchema salary=new FieldSchema("salary", DataType.INTEGER);
+		FieldSchema dno=new FieldSchema("dno", DataType.INTEGER);
+		//add fields to list
+		List<FieldSchema> fieldList=new ArrayList<Schema.FieldSchema>();
+		fieldList.add(eno);
+		fieldList.add(ename);
+		fieldList.add(salary);
+		fieldList.add(dno);
+		//create a schema with list
+		Schema empSchema=new Schema(fieldList);
+		//return resource schema
+		return new ResourceSchema(empSchema);
+}

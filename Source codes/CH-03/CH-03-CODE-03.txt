@@ -1,0 +1,2 @@
+Grunt>cat /home/hdfs/allproperties.props;
+Inpath=/user/hdfs/data

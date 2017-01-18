@@ -1,0 +1,22 @@
+@Override
+	public Integer exec(Tuple input) throws IOException {
+		int count = 0;
+
+		DataBag db = (DataBag) input.get(0);
+		if (db == null)
+			return null;
+		Iterator it = db.iterator();
+		while (it.hasNext()) {
+			Tuple dnotuple = (Tuple) it.next();
+			for (int i = 0; i < dnotuple.size(); i++) {
+				Object dno = dnotuple.get(i);
+				if (dno == null) {
+
+					count++;
+				}
+
+			}
+
+		}
+		return new Integer(count);
+	}

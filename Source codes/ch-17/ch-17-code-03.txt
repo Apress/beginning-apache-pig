@@ -1,0 +1,9 @@
+public void operate(FlowProcess fproc, FunctionCall fcall) {
+		TupleEntry args = fcall.getArguments();
+		String ename =(String)args.get(0);
+		String enameupper=ename.toUpperCase();
+	    Tuple output = new Tuple();
+	    output.addString(enameupper);
+	    fcall.getOutputCollector().add(output);
+		
+	}

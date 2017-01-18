@@ -1,0 +1,11 @@
+Message employee{
+Required int eno;
+Optional String ename;
+Optional group address{
+    Optional int roadnumber;
+    Optional string city;
+    Repeated string city;
+    Required int pin;
+   }
+
+}

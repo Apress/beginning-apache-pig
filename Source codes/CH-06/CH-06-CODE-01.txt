@@ -1,0 +1,7 @@
+fs.defaultFS=hdfs://cluster10
+mapreduce.jobtracker.address=cluster10n1:8021
+queueName=default
+examplesRoot=examples
+oozie.use.system.libpath=true
+oozie.libpath=/user/${user.name}/${examplesRoot}/apps/examples-lib
+oozie.wf.application.path=/user/${user.name}/${examplesRoot}/apps/pig

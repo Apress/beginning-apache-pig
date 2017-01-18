@@ -1,0 +1,2 @@
+emp = load '/data/employee' using PigStorage(',') as (eno:int,ename:chararray,salary:int,deptno:int);
+Emp = stream Emp through `filter100.sh`;   

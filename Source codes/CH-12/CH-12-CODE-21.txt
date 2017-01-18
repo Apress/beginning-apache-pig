@@ -1,0 +1,5 @@
+public interface Accumulator <T> {
+  public void accumulate(Tuple b) throws IOException;
+ public T getValue();
+  public void cleanup();
+}

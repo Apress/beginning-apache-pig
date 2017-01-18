@@ -1,0 +1,7 @@
+empcount = foreach deptgrp generate group,flatten(emp.ename);
+dump  empcount;
+
+(200,Niruopam)
+(200,Bala)
+(300,Radha)
+(,Nitya)

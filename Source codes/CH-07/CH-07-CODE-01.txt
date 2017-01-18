@@ -1,0 +1,5 @@
+hcat -e "show tables"
+OK
+employee
+department
+Time taken: 2.305 seconds

@@ -1,0 +1,6 @@
+Set hive.support.concurrency ='true'
+Set hive.enforce.bucketing ='true' 
+Set hive.exec.dynamic.partition.mode = nonstrict
+Set hive.txn.manager = org.apache.hadoop.hive.ql.lockmgr.DbTxnManager
+Set hive.compactor.initiator.on =' true'
+Set hive.compactor.worker.threads =120;

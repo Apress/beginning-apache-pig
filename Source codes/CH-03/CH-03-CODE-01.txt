@@ -1,0 +1,3 @@
+Grunt>history
+1   num = load 'movies';
+2   num11 = filter num by $0==11;

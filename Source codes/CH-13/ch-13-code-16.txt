@@ -1,0 +1,4 @@
+UDFContext ctx= UDFContext.getUDFContext();
+Configuration conf=ctx.getJobConf();
+String maptasks=conf.get("mapred.map.tasks");
+

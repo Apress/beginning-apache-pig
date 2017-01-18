@@ -1,0 +1,4 @@
+Grpall = GROUP emp ALL;
+Empcount = foreach grpall generate group,count(emp.eno);
+Dump empcount;
+(all,10000)

@@ -1,0 +1,2 @@
+Emp = load 'employee'  using HCatalogLoader as (eno,ename,salary,dno);
+Dept100=filter emp by dno==100;

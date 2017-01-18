@@ -1,0 +1,5 @@
+public class ReplaceNull extends EvalFunc<Integer> {
+	public Integer exec(Tuple input) throws IOException {
+progress();
+    }
+}

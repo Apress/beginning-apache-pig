@@ -1,0 +1,16 @@
+public class SampleAggregator extends BaseOperation implements Aggregator {
+
+public void start(FlowProcess fproc, AggregatorCall aCall) {
+	}
+
+
+	public void aggregate(FlowProcess fproc, AggregatorCall aCall) {
+	}
+
+	public void complete(FlowProcess fproc, AggregatorCall aCall) {
+	}
+
+	
+
+
+}

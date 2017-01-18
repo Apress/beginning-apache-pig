@@ -1,0 +1,5 @@
+register customutils.jar;
+emp = load 'employee.csv' using PigStorage(',') as (eno:int,ename:chararray,salary:int,dno:int);
+dnodname =foreach emp generate ename,customutils.CacheJoin(dno);
+dump dnodname;
+

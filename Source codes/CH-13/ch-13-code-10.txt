@@ -1,0 +1,6 @@
+public void storeSchema(ResourceSchema rSchema, String loc, Job job)
+			throws IOException {
+		JsonMetadata jsonMetadata=new JsonMetadata();
+		jsonMetadata.storeSchema(rSchema, loc, job);
+		
+	}

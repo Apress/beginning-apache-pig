@@ -1,0 +1,7 @@
+Deptgrp = GROUP emp BY deptno;
+Empcount = foreach deptgrp generate group,COUNT(emp.empno);
+Dump empcount;
+
+(200,200)
+(300,100)
+(,11)

@@ -1,0 +1,2 @@
+emp = load 'hbase://employee' using org.apache.pig.backend.hadoop.hbase.HBaseStorage('empdetails:eno,empdetails:ename,empdetails:salary,empdetails:deptno') as (eno:int,ename:chararray,salary:int,deptno:int);
+dump emp;

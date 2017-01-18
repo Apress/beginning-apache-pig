@@ -1,0 +1,21 @@
+import java.io.IOException;
+import org.apache.pig.PigRunner;
+import org.apache.pig.PigServer;
+import org.apache.pig.backend.executionengine.ExecException;
+
+public class StoreEmp {
+   public static void main(String[] args) {
+      
+      PigServer pigServer=null;
+	try {
+		pigServer = new PigServer("local");
+		pigServer.registerQuery("emp = load '"+args[0]+"' ;");
+		pigServer.store("emp", args[1]);
+		
+	} catch (ExecException e1) {
+		e1.printStackTrace();
+	} catch (IOException e1) {
+		e1.printStackTrace();
+	}
+    }
+   }

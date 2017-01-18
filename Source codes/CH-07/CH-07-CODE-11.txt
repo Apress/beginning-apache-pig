@@ -1,0 +1,4 @@
+hdfs@cluster10-1:~> Cat employees5.pig
+employees = load ' employees ';
+employees5 = limit employees 5;
+store employees5 into ' employees5 ';
