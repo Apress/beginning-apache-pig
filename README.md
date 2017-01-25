@@ -1,6 +1,6 @@
 #Apress Source Code
 
-This repository accompanies [*Beginning Apache Pig*](http://www.apress.com/9781484223369) by Vaddeman, Balaswamy (Apress, 2016).
+This repository accompanies [*Beginning Apache Pig*](http://www.apress.com/9781484223369) by Balaswamy Vaddeman (Apress, 2016).
 
 ![Cover image](9781484223369.jpg)
 
